@@ -111,6 +111,7 @@ showElements(products)
 //Checking if it does what we want
 document.getElementById("check-btn").addEventListener("click", () => console.log(products))
 
+//Calculating taxes
 var whichTax = product => {
     var tax = 0;
 
@@ -125,6 +126,7 @@ var whichTax = product => {
     return tax;
 }
 
+//Doing mathemathical operations
 var calculateSubtotal = productsList => {
     var subtotal = 0;
     
@@ -157,6 +159,7 @@ var calculateTotal = productsList => {
     return total;
 }
 
+//Disabling the button
 var isEmpty = productsList => {
     var isDisabled = true;
 
@@ -171,6 +174,7 @@ var isEmpty = productsList => {
 
 isEmpty(products);
 
+//Showing the results
 var showCalculate = productsList => {
     document.getElementById("subtotal").innerText = "Subtotal: " + calculateSubtotal(productsList);
     document.getElementById("taxes").innerText = "IVA: " + calculateTaxes(productsList);
